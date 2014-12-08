@@ -1,0 +1,134 @@
+<!doctype html>
+<html ng-app="leoApp" ng-controller='RootCtrl'>
+  <head>
+    <titel>Coachman's Rebel of Bavaria NEU</titel>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="keywords" content="Rebel,Leo,Gordon Setter,Jagdhund,VDH,Rüde,Coachman's,GSCD,Verein für Pointer und Setter,Zucht, Bester Hund der Welt">
+    <meta name="description" content="Coachman's Rebel of Bavaria">
+    <meta name="author" content="Oliver Marohn">
+    <meta name="author" content="Dörthe Karrasch">    
+    <meta name="robots" content="index,follow">       
+    <meta name="revisit-after" content="1 month"> 
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <link rel="stylesheet" href="styles/animate.css">
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <button class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="#/"><image id="imgbavaria" src="bilda/Bayern_Wappen.svg.png"><span id="coach">Coachman's</span><span id="rebel">Rebel of Bavaria</span></image></a>
+
+      <div class="nav-collapse">
+        <ul class="nav navbar-nav">
+          <li ng-class="isActive('/')"><a href="#/">Home</a></li>
+          <li ng-class="isActive('/leo')"><a href="#leo">Leo</a></li>
+          <li id='newsdate' ng-class="isActive('/news')" class='animated rubberBand'><a href="#news">News <span class="label label-danger">22.10.2014</span></a></li>
+          <li ng-class="isActive('/galerie')"><a href="#galerie/Rebel">Galerie</a></li>
+          <li ng-class="isActive('/pedigree')"><a href="#pedigree">Pedigree</a></li>
+          <li ng-class="isActive('/zucht')"><a href="#zucht">Zucht</a></li>
+
+          <li ng-class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown">Erfolge<b class="caret"></b></a>
+            <ul id="dropdownmnu" class="dropdown-menu">  
+              <li ng-class="isActive('/ausstellungen')"><a href="#ausstellungen">Ausstellungen</a></li>
+              <li ng-class="isActive('/pruefungen')"><a href="#pruefungen">Prüfungen</a></li>
+            </ul>
+          </li>
+          
+          <li ng-class="isActive('/contact')"><a href="#contact">Kontakt</a></li>
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+          <li ng-class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown">Links <b class="caret"></b></a>
+            <ul id="dropdownmnu" class="dropdown-menu">
+                <li><a href="http://www.coachmans.de/" target="_blank">Coachman's</a></li>
+                <li><a href="http://www.gordon-setter-fieldtalks-guinness.de/" target="_blank">Fieldtalk's Guinness</a></li>
+                <li><a href="http://www.pointer-und-setter.de/" target="_blank">Verein Pointer und Setter</a></li>
+                <li><a href="http://www.gordon-setter.de/" target="_blank">Gordon Setter Club e.V.</a></li>
+                <li><a href="http://www.vdh.de/" target="_blank">Verband für das deutsches Hundewesen</a></li>
+                <li><a href="http://www.jgv-stade.de/" target="_blank">Jagdgebrauchshund Verband Stade</a></li>
+            </ul>
+          <li ng-class="isActive('/impressum')"><a href="#impressum">Impressum</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+    
+    <div id="wrap">
+      <div class="container"> 
+          <!--
+          <div id="teaser" class="bs-sidebar hidden-print affix" role="complementary">
+              NEWS!!!
+          </div>
+          -->
+        <div ng-view></div>
+      </div>
+    </div>
+  
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted credit "><b>Coachman's</b> Rebel of Bavaria, a.k.a <b>Leopold Hubertus,</b> called <b>Leo!</b></p>
+      </div>
+    </div>
+
+    <!-- GOOGLE ANALYTICS-->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'TEST-UA-55864702-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <script src="bower_components/uibootstrap/src/transition/transition.js"></script>
+    <script src="bower_components/uibootstrap/src/carousel/carousel.js"></script>
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/root.js"></script>
+    <script src="scripts/controllers/slide.js"></script>
+    <script src="scripts/directives/news.js"></script>
+    <script src="scripts/directives/show.js"></script>
+    <script src="scripts/directives/leistung.js"></script>
+    <script src="scripts/controllers/lightbox.js"></script>
+    <!-- endbuild -->
+</body>
+</html>
