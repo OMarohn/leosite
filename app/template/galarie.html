@@ -1,0 +1,16 @@
+<div id="carousel-example-generic" class="carousel slide">
+    <ol class="carousel-indicators">
+        <li ng-repeat="item in bilder" data-target="#carousel-example-generic" data-slide-to="{{$index}}"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div ng-repeat="item in bilder" class="item {{item.klasse}}">
+            <img ng-src="{{pfad}}{{item.filename}}" width="100%" height="{{height}}" alt="{{item.text}}">
+        </div>
+    </div>
+    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
+</div>

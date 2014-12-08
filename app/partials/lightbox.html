@@ -1,0 +1,20 @@
+<!-- -->
+<div class="row btn-group" data-toggle="buttons">
+    <label class="btn btn-default">
+        <input type="radio" name="options" id="option1">
+        <a href="#/galerie/Welpe">Welpe</a>
+    </label>
+    <label class="btn btn-default">
+        <input type="radio" name="options" id="option2">
+        <a href="#/galerie/Jugend">Jugend</a>
+    </label>
+    <label class="btn btn-default">
+        <input type="radio" name="options" id="option3">
+        <a href="#/galerie/Rebel">Rebel</a>
+    </label>
+</div>
+<div class="jumbotron row" id="thumbnails">
+    <a class="kontakt" ng-repeat="item in akDaten.bilder" href="{{akDaten.pfad+item.filename}}">
+        <img class="" ng-src="{{akDaten.pfadThumb+item.filename}}" alt="First" title="{{item.text}}" />
+    </a>
+</div>

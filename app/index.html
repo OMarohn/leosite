@@ -4,13 +4,13 @@
     <titel>Coachman's Rebel of Bavaria NEU</titel>
     <meta charset="utf-8">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Rebel,Leo,Gordon Setter,Jagdhund,VDH,Rüde,Coachman's,GSCD,Verein für Pointer und Setter,Zucht, Bester Hund der Welt">
     <meta name="description" content="Coachman's Rebel of Bavaria">
     <meta name="author" content="Oliver Marohn">
-    <meta name="author" content="Dörthe Karrasch">    
-    <meta name="robots" content="index,follow">       
-    <meta name="revisit-after" content="1 month"> 
+    <meta name="author" content="Dörthe Karrasch">
+    <meta name="robots" content="index,follow">
+    <meta name="revisit-after" content="1 month">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -48,12 +48,12 @@
 
           <li ng-class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown">Erfolge<b class="caret"></b></a>
-            <ul id="dropdownmnu" class="dropdown-menu">  
+            <ul id="dropdownmnu" class="dropdown-menu">
               <li ng-class="isActive('/ausstellungen')"><a href="#ausstellungen">Ausstellungen</a></li>
               <li ng-class="isActive('/pruefungen')"><a href="#pruefungen">Prüfungen</a></li>
             </ul>
           </li>
-          
+
           <li ng-class="isActive('/contact')"><a href="#contact">Kontakt</a></li>
         </ul>
         <ul class="nav navbar-nav pull-right">
@@ -71,9 +71,9 @@
         </ul>
       </div><!--/.nav-collapse -->
     </div>
-    
+
     <div id="wrap">
-      <div class="container"> 
+      <div class="container">
           <!--
           <div id="teaser" class="bs-sidebar hidden-print affix" role="complementary">
               NEWS!!!
@@ -82,7 +82,7 @@
         <div ng-view></div>
       </div>
     </div>
-  
+
     <div id="footer">
       <div class="container">
         <p class="text-muted credit "><b>Coachman's</b> Rebel of Bavaria, a.k.a <b>Leopold Hubertus,</b> called <b>Leo!</b></p>
@@ -102,15 +102,17 @@
 
     <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/json3/lib/json3.js"></script>
+    <script src="../bower_components/es5-shim/es5-shim.js"></script>
+    <script src="../bower_components/json3/lib/json3.js"></script>
     <![endif]-->
     <!-- endbuild -->
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
@@ -118,8 +120,8 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-    <script src="bower_components/uibootstrap/src/transition/transition.js"></script>
-    <script src="bower_components/uibootstrap/src/carousel/carousel.js"></script>
+    <script src="../bower_components/uibootstrap/src/transition/transition.js"></script>
+    <script src="../bower_components/uibootstrap/src/carousel/carousel.js"></script>
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
